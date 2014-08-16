@@ -35,12 +35,12 @@ public class HomeController {
         MongoClient mongoclient1 = new MongoClient("10.219.4.172:27017");
         MongoOperations mongoOps = new MongoTemplate(mongoclient1,"wc");
 
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
+	Date date = new Date();
+	DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
 		
-		String formattedDate = dateFormat.format(date);
+	String formattedDate = dateFormat.format(date);
 		
-		modelMap.addAttribute("serverTime", formattedDate );
+	modelMap.addAttribute("serverTime", formattedDate );
         modelMap.addAttribute("name", Lang);
         modelMap.addAttribute("sha", SHA);
 
