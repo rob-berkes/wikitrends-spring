@@ -6,13 +6,13 @@ public class article {
 
 	@Id
 	private String id;
-	private String aTitle;
-    private String date;
-
-	public article (String id, String aTitle, String date) {
+	private String LANG;
+    private String DATE;
+ 
+	public article (String id, String LANG, String date) {
         this.id = id;
-        this.aTitle = aTitle;
-        this.date = date;
+        this.LANG = LANG;
+        this.DATE = date;
     }
 
 }
