@@ -32,7 +32,7 @@ public class HomeController {
 			@PathVariable("ShaHash") String SHA,
 			ModelMap modelMap) throws UnknownHostException {
 		
-        MongoClient mongoclient1 = new MongoClient("10.219.4.172:27017");
+        MongoClient mongoclient1 = new MongoClient("10.221.135.154:27017");
         MongoOperations mongoOps = new MongoTemplate(mongoclient1,"wc");
 
 	Date date = new Date();
