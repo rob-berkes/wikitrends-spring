@@ -8,7 +8,8 @@
 <h1>
 	Hello world!  
 </h1>
-  ${name}
-<P>  The time on the server is ${serverTime}. </P>
+  ${ID}
+<P>  Thank you for using the spam service. 
+The name of the article inserted was ${title}. </P>
 </body>
 </html>

@@ -2,18 +2,17 @@ package com.wikitrends.front;
 
 import org.springframework.data.annotation.Id;
 
-public class link {
+public class spamlinks {
 	
 	@Id
 	String id;
 	String title;
-	int rollavg;
-	int place;
+	String language;
 	
-	public link(String id, String title, int rollavg, int place) {
+	public spamlinks(String id, String title, String language) {
 		this.id = id;
 		this.title = title;
-		this.rollavg = rollavg;
-		this.place = place;
+		this.language = language;
+	
 	}
 }
