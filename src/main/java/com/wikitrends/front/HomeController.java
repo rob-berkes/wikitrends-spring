@@ -27,9 +27,10 @@ public class HomeController {
 	 */
 
     /*note:                 /{SampleSha}  or new var name replacing goes here when site ready */
-	@RequestMapping(value = "/spamweb/{Language}/{ShaHash}", method = RequestMethod.GET)
+	@RequestMapping(value = "/spamweb/{Language}/{id}/{ArticleTitle}", method = RequestMethod.GET)
 	public String home(@PathVariable("Language") String Lang, 
-			@PathVariable("ShaHash") String SHA,
+			@PathVariable("id") String ID,
+			@PathVariable("ArticleTitle") String ArticleTitle,
 			ModelMap modelMap) throws UnknownHostException {
 		
         MongoClient mongoclient1 = new MongoClient("10.221.135.154:27017");
@@ -42,10 +43,10 @@ public class HomeController {
 		
 	modelMap.addAttribute("serverTime", formattedDate );
         modelMap.addAttribute("name", Lang);
-        modelMap.addAttribute("sha", SHA);
+        modelMap.addAttribute("sha", ID);
 
-        mongoOps.insert(new article(SHA,Lang,SHA));
-		return "spamweb";
+        mongoOps.insert(new spamlinks(ID,ArticleTitle,Lang));
+		return "home";
 	}
 	
 }
