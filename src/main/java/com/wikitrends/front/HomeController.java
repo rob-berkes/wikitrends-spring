@@ -3,7 +3,8 @@ package com.wikitrends.front;
 import java.net.UnknownHostException;
 import java.text.DateFormat;
 import java.util.Date;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Controller;
@@ -20,11 +21,7 @@ import com.mongodb.MongoClient;
 @Controller
 public class HomeController {
 	
-	
-    /**
-	 * Simply selects the home view to render by returning its name.
-	 * @throws UnknownHostException 
-	 */
+       private static final Logger logger = LoggerFactory.getLogger(HomeController.class);	
 
     /*note:                 /{SampleSha}  or new var name replacing goes here when site ready */
 	@RequestMapping(value = "/spamweb/{Language}/{ShaHash}", method = RequestMethod.GET)
